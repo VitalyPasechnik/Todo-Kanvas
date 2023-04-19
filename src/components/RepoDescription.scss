@@ -1,0 +1,13 @@
+.repoDescr {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+
+  &__title {
+    color: blue;
+  }
+}
+
+p {
+  color: blue;
+}
