@@ -12,7 +12,7 @@ export const Issue: React.FC<Props> = ({ item }) => {
   const diffInDays = Math.ceil(Math.abs(x.getTime() - y.getTime()) / (1000 * 3600 * 24));
 
   return (
-    <div className="item" >
+    <div className="item">
       <h4>{item.title}</h4>
       <p>#{item.id} opened {diffInDays} days ago</p>
       <p>{item.author_association} | Comments: {item.comments}</p>

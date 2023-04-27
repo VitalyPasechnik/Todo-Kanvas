@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import './App.scss';
+
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+
 import { ITodo } from './helpers/types/ITodo'
 import { Section } from './components/Section';
 import { RepoDescription } from './components/RepoDescription';
+
+
+import KanbanTable from "./components/KanbanTable";
 
 import axios from 'axios';
 
@@ -18,7 +24,7 @@ function App() {
       try {
         const response = await axios.get(value, {
           headers: {
-            Authorization: `Bearer ${'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'}`,
+            Authorization: `Bearer ${'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'}`,
           },
         });
         setIssues(response.data);
@@ -29,8 +35,6 @@ function App() {
     }
 
     fetchIssues();
-
-    console.log();
   }
 
   return (
@@ -54,9 +58,11 @@ function App() {
       )}
 
       <main className="App-blocks">
-        <Section title="ToDo" todos={issues} />
+        <KanbanTable />
+        {/* <QuoteApp /> */}
+        {/* <Section title="ToDo" todos={issues} />
         <Section title="In Progress" todos={issues.filter((i: ITodo) => i.state === 'open')} />
-        <Section title="Done" todos={issues.filter((i: ITodo) => i.closed_at !== null)} />
+        <Section title="Done" todos={issues.filter((i: ITodo) => i.closed_at !== null)} /> */}
       </main>
     </div>
   );
