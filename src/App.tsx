@@ -59,10 +59,6 @@ function App() {
 
       <main className="App-blocks">
         <KanbanTable />
-        {/* <QuoteApp /> */}
-        {/* <Section title="ToDo" todos={issues} />
-        <Section title="In Progress" todos={issues.filter((i: ITodo) => i.state === 'open')} />
-        <Section title="Done" todos={issues.filter((i: ITodo) => i.closed_at !== null)} /> */}
       </main>
     </div>
   );

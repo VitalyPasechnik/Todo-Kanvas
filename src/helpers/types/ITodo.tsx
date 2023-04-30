@@ -8,4 +8,8 @@ export type ITodo = {
   comments: number,
 };
 
-
+export type IData = {
+  backlog: Object[],
+  todo: Object[],
+  done: Object[],
+}
